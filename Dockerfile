@@ -7,6 +7,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 #ENV VER=v4.20.0
 
-RUN apk update && apk add curl curl-dev bash curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+RUN Y | curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 RUN code-server --link
 
