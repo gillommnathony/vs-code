@@ -7,6 +7,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 #ENV VER=v4.20.0
 
-RUN echo "Y" | curl -fsSL https://code-server.dev/install.sh | sh
+RUN curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 RUN code-server --link
 
